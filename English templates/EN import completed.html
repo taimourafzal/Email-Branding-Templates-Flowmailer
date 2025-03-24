@@ -1,19 +1,19 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-    <head>
-        <!-- NAME: 1 COLUMN -->
-        <!--[if gte mso 15]>
-        <xml>
-            <o:OfficeDocumentSettings>
-            <o:AllowPNG/>
-            <o:PixelsPerInch>96</o:PixelsPerInch>
-            </o:OfficeDocumentSettings>
-        </xml>
-        <![endif]-->
-        <meta charset="UTF-8">
+	<head>
+		<!-- NAME: 1 COLUMN -->
+		<!--[if gte mso 15]>
+		<xml>
+			<o:OfficeDocumentSettings>
+			<o:AllowPNG/>
+			<o:PixelsPerInch>96</o:PixelsPerInch>
+			</o:OfficeDocumentSettings>
+		</xml>
+		<![endif]-->
+		<meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>${currentMessage.subject}</title>
+		<title>${currentMessage.subject}</title>
         
     <style type="text/css">
 		p{
@@ -39,9 +39,6 @@
 			margin:0;
 			padding:0;
 			width:100%;
-		}
-		.mcnPreviewText{
-			display:none !important;
 		}
 		#outlook a{
 			padding:0;
@@ -91,7 +88,7 @@
 		a.mcnButton{
 			display:block;
 		}
-		.mcnImage,.mcnRetinaImage{
+		.mcnImage{
 			vertical-align:bottom;
 		}
 		.mcnTextContent{
@@ -365,17 +362,12 @@
 		}
 
 }	@media only screen and (max-width: 480px){
-		.mcnRetinaImage{
-			max-width:100% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
 		.mcnImage{
 			width:100% !important;
 		}
 
 }	@media only screen and (max-width: 480px){
-		.mcnCartContainer,.mcnCaptionTopContent,.mcnRecContentContainer,.mcnCaptionBottomContent,.mcnTextContentContainer,.mcnBoxedTextContentContainer,.mcnImageGroupContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionLeftImageContentContainer,.mcnCaptionRightImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightTextContentContainer,.mcnImageCardLeftImageContentContainer,.mcnImageCardRightImageContentContainer{
+		.mcnCartContainer,.mcnCaptionTopContent,.mcnRecContentContainer,.mcnCaptionBottomContent,.mcnTextContentContainer,.mcnBoxedTextContentContainer,.mcnImageGroupContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionLeftImageContentContainer,.mcnCaptionRightImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightTextContentContainer{
 			max-width:100% !important;
 			width:100% !important;
 		}
@@ -396,7 +388,7 @@
 		}
 
 }	@media only screen and (max-width: 480px){
-		.mcnImageCardTopImageContent,.mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent{
+		.mcnImageCardTopImageContent,.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent{
 			padding-top:18px !important;
 		}
 
@@ -552,22 +544,18 @@
                 <tr>
                     <td align="center" valign="top" id="bodyCell">
                         <!-- BEGIN TEMPLATE // -->
-                        <!--[if (gte mso 9)|(IE)]>
-                        <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
-                        <tr>
-                        <td align="center" valign="top" width="600" style="width:600px;">
-                        <![endif]-->
+						<!--[if gte mso 9]>
+						<table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
+						<tr>
+						<td align="center" valign="top" width="600" style="width:600px;">
+						<![endif]-->
                         <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">
                             <tr>
-                                <td valign="top">
-                                    <#if LOGO_IMAGE_URL??>
-                                            <#if EMAIL_HEADER_COLOR ?? ><div style="height: auto; background-color: ${EMAIL_HEADER_COLOR}"> <img class="header-logo-image" style="max-width: 120px; max-height: 100px; padding: 16px 0 16px 20px;" src="${LOGO_IMAGE_URL}" alt="Footer Logo"> </div> </#if> 
-                                        <#else>
-                                            <#if EMAIL_HEADER_COLOR ??><div style="height: 59px; background-color: ${EMAIL_HEADER_COLOR}"></div> </#if> 
-                                    </#if>
-                                </td>
-                            </tr>                        
-
+                                <td valign="top" id="templatePreheader"></td>
+                            </tr>
+                            <tr>
+                                <td valign="top" id="templateHeader"></td>
+                            </tr>
                             <tr>
                                 <td valign="top" id="templateBody"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
     <tbody class="mcnTextBlockOuter">
@@ -581,16 +569,15 @@
 				<!--[if mso]>
 				<td valign="top" width="599" style="width:599px;">
 				<![endif]-->
-				
-				
-				
-            <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
-                <tbody class="email-body">
-                    <tr>
-                        <td valign="top" class="mcnTextContent" style="padding-top:32px; padding-right:50px; padding-bottom:9px; padding-left:50px;">
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                    <tbody><tr>
+                        
+                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
+                        
 
-                            
-                            <h1 style="color: <#if EMAIL_TITLE_COLOR??>${EMAIL_TITLE_COLOR}<#else>#696969</#if>; 
+
+
+                        <h1 style="color: <#if EMAIL_TITLE_COLOR??>${EMAIL_TITLE_COLOR}<#else>#696969</#if>; 
                                     font-size: 20px; 
                                     font-family: <#if EMAIL_TITLE_FONT??>${EMAIL_TITLE_FONT}<#else>Helvetica</#if>; 
                                     margin-top: 0px; 
@@ -600,15 +587,17 @@
                              <p style="margin-bottom: 20px; 
                                      color: <#if EMAIL_BODY_COLOR??>${EMAIL_BODY_COLOR}<#else>#696969</#if>; 
                                      font-family: <#if EMAIL_BODY_FONT??>${EMAIL_BODY_FONT}<#else>Arial</#if>;">
-                                Hooray! Your essays are ready! Click on the button below to download the PDF.                                 
-                             </p>                            
-                            
+                                 Hooray! Your import is complete. A total of ${USERSIMPORTED} users have been successfully created. <#if ERROR?? && ERROR != false> However, we encountered the error(s) below.
+                                 <br>${ERRORNOTE}<br>
+                                 Download the attached file to view users who weren't imported</#if>
+                                 <br>
+                                 Open user management with the link below to add more users.
+                             </p>
+
+
                         </td>
                     </tr>
-                </tbody>
-            </table>				
-				
-
+                </tbody></table>
 				<!--[if mso]>
 				</td>
 				<![endif]-->
@@ -623,34 +612,37 @@
 </table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
     <tbody class="mcnButtonBlockOuter">
         <tr>
-        
+
+            
+            
+            
             <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
                 <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border-radius: 3px;background-color:<#if EMAIL_BUTTON_COLOR??>${EMAIL_BUTTON_COLOR}<#else>#03142D</#if>;">
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" 
-                                style="font-family: <#if EMAIL_BODY_FONT??>${EMAIL_BODY_FONT}<#else>Arial</#if>;
+                                style="font-family: <#if EMAIL_BODY_FONT??>${EMAIL_BODY_FONT}<#else>Arial</#if>;  
                                        font-size: 16px; padding: 15px;">
                                                         
 
-                                <a class="mcnButton" title="Download" href="${USERESSAY}" target="_blank" 
+                                <a class="mcnButton" title="Open User Management" href="https://webplayer.appicalnow.com/users" target="_blank" 
                                    style="font-weight: bold;
                                           letter-spacing: normal;
                                           line-height: 100%;
                                           text-align: center;
                                           text-decoration: none;
                                           color: <#if BUTTON_TEXT_COLOR??>${BUTTON_TEXT_COLOR}<#else>#FFFFFF</#if>;">
-                                    Download
+                                    Open User Management
                                 </a>
                                 
                             </td>
                         </tr>
                     </tbody>
                 </table>
-            </td>        
-        
-        
-
+            </td>            
+            
+            
+            
         </tr>
     </tbody>
 </table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
@@ -665,16 +657,18 @@
 				<!--[if mso]>
 				<td valign="top" width="600" style="width:600px;">
 				<![endif]-->
-				
+
+                
+                
                 <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody>
                         <tr>
                             <td valign="middle" style="padding: 5px 2px; text-align: center; font-family: Verdana, Geneva, sans-serif; font-size: 12px; color: #696969;"> <span>Powered by</span> <span class="logo_container" style="padding: 0 2px; vertical-align: middle;"> <#if IMAGE_FOOTER_LOGO_URL ??>   <img style="max-width: 60px; height: auto; display: inline-block; vertical-align: middle;" src="${IMAGE_FOOTER_LOGO_URL}" alt="Footer Logo"> <#else>Appical </#if> </span> <span style="padding: 0 2px;">|</span> <span>support@appical.com</span> </td>
                         </tr>
                     </tbody>
-                </table>				
-				
-
+                </table>                
+                
+                
 				<!--[if mso]>
 				</td>
 				<![endif]-->
@@ -710,11 +704,11 @@
 </table></td>
                             </tr>
                         </table>
-                        <!--[if (gte mso 9)|(IE)]>
-                        </td>
-                        </tr>
-                        </table>
-                        <![endif]-->
+						<!--[if gte mso 9]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
                         <!-- // END TEMPLATE -->
                     </td>
                 </tr>

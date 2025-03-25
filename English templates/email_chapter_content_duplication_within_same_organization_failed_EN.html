@@ -598,7 +598,7 @@
                              <p style="margin-bottom: 20px; 
                                      color: <#if EMAIL_BODY_COLOR??>${EMAIL_BODY_COLOR}<#else>#696969</#if>; 
                                      font-family: <#if EMAIL_BODY_FONT??>${EMAIL_BODY_FONT}<#else>Arial</#if>;">
-                                    The content for chapter <strong>${SOURCE_CHAPTER_NAME}</strong> from story <strong>${SOURCE_STORY_NAME}</strong> from course <strong>${SOURCE_COURSE_NAME}</strong> could not be successfully duplicated to chapter <strong>${DESTINATION_CHAPTER_NAME}</strong> from story <strong>${DESTINATION_STORY_NAME}</strong> from course <strong>${DESTINATION_COURSE_NAME}</strong>.<br><br>${CONSUMER_ERROR_MESSAGE}<br><br>Your unique reference number:<br><br><strong>${TRACKED_EXCEPTION_INTERNAL_ID}</strong><br><br>
+                                    The content for chapter <strong>${SOURCE_CHAPTER_NAME}</strong> from story <strong>${SOURCE_STORY_NAME}</strong> from course <strong>${SOURCE_COURSE_NAME}</strong> could not be successfully duplicated to chapter <strong>${DESTINATION_CHAPTER_NAME}</strong> from story <strong>${DESTINATION_STORY_NAME}</strong> from course <strong>${DESTINATION_COURSE_NAME}</strong>.<br><br>${CONSUMER_ERROR_MESSAGE!}<br><br>Your unique reference number:<br><br><strong>${TRACKED_EXCEPTION_INTERNAL_ID!}</strong><br><br>
                              </p>
 
                         </td>

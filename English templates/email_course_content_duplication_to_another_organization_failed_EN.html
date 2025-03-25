@@ -598,7 +598,7 @@
                              <p style="margin-bottom: 20px; 
                                      color: <#if EMAIL_BODY_COLOR??>${EMAIL_BODY_COLOR}<#else>#696969</#if>; 
                                      font-family: <#if EMAIL_BODY_FONT??>${EMAIL_BODY_FONT}<#else>Arial</#if>;">
-                                    The content for course <strong>${SOURCE_COURSE_NAME}</strong> from organization <strong>${SOURCE_APPLICATION_NAME}</strong> could not be successfully duplicated to course <strong>${DESTINATION_COURSE_NAME}</strong> from organization <strong>${DESTINATION_APPLICATION_NAME}</strong>.<br><br>${CONSUMER_ERROR_MESSAGE}<br><br>Your unique reference number:<br><br><strong>${TRACKED_EXCEPTION_INTERNAL_ID}</strong><br><br>
+                                    The content for course <strong>${SOURCE_COURSE_NAME}</strong> from organization <strong>${SOURCE_APPLICATION_NAME}</strong> could not be successfully duplicated to course <strong>${DESTINATION_COURSE_NAME}</strong> from organization <strong>${DESTINATION_APPLICATION_NAME}</strong>.<br><br>${CONSUMER_ERROR_MESSAGE!}<br><br>Your unique reference number:<br><br><strong>${TRACKED_EXCEPTION_INTERNAL_ID!}</strong><br><br>
                              </p>
 
                         </td>

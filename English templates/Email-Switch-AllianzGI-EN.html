@@ -554,11 +554,14 @@
                         <![endif]-->
                         <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">
                             <tr>
-                                <td valign="top" id="templatePreheader"></td>
-                            </tr>
-                            <tr>
-                                <td valign="top" id="templateHeader"></td>
-                            </tr>
+                                <td valign="top">
+                                    <#if LOGO_IMAGE_URL??>
+                                            <#if EMAIL_HEADER_COLOR ?? ><div style="height: auto; background-color: ${EMAIL_HEADER_COLOR}"> <img class="header-logo-image" style="max-width: 120px; max-height: 100px; padding: 16px 0 16px 20px;" src="${LOGO_IMAGE_URL}" alt="Footer Logo"> </div> </#if> 
+                                        <#else>
+                                            <#if EMAIL_HEADER_COLOR ??><div style="height: 59px; background-color: ${EMAIL_HEADER_COLOR}"></div> </#if> 
+                                    </#if>
+                                </td>
+                            </tr>      
                             <tr>
                                 <td valign="top" id="templateBody"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
     <tbody class="mcnTextBlockOuter">
@@ -577,15 +580,38 @@
                         
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
                         
-                            <h1><span style="color:#696969">Hi ${FNAME},</span></h1>
 
-<p>You have started your first day at AllianzGI! From now on you can log into the onboarding app with your AllianzGI email address.
-Since you can log in with Single Sign On, you no longer need your password. If you are signing in via the web version, please use <a href="https://myapps.microsoft.com/signin/1770ff9d-1749-4d8d-97c1-8e7263d04930?tenantId=a1eacbd5-fb0e-46f1-81e3-4965ea8e45bb">this SSO link</a>.</p> If you want to sign in via the app, please download the app from our company app portal.<br>
-<br> You will no longer be able to access Appical using your personal email or your personal device. Of course, your progress is saved.<br> 
-<br>
-If you have any questions, you can contact our <font color="#696969"><a href="mailto:onboarding@allianzgi.com?subject=AllianzGI%20SSO%20login&body=Hi%2C%20%0A%0AI%20am%20experiencing%20issues%20logging%20into%20Appical%20via%20my%20new%20AllianzGI%20email%20address.%20Can%20you%20help%20me%20out%3F%20" target="_blank">Onboarding Specialist</a>.</font><br>
-<br>
-Welcome and good luck during your first few days.</p>
+
+
+                            <h1 style="color: <#if EMAIL_TITLE_COLOR??>${EMAIL_TITLE_COLOR}<#else>#696969</#if>; 
+                                     font-size: 20px; 
+                                     font-family: <#if EMAIL_TITLE_FONT??>${EMAIL_TITLE_FONT}<#else>Helvetica</#if>; 
+                                     margin-top: 0px; 
+                                     margin-bottom: 0px; 
+                                     padding-bottom: 0px;">Hi ${FNAME},</h1>
+                              
+                              <p style="margin-bottom: 20px; 
+                                      color: <#if EMAIL_BODY_COLOR??>${EMAIL_BODY_COLOR}<#else>#696969</#if>; 
+                                      font-family: <#if EMAIL_BODY_FONT??>${EMAIL_BODY_FONT}<#else>Arial</#if>;">
+                                    You have started your first day at AllianzGI! From now on you can log into the onboarding app with your AllianzGI email address.
+                                    Since you can log in with Single Sign On, you no longer need your password. If you are signing in via the web version, please use <a href="https://myapps.microsoft.com/signin/1770ff9d-1749-4d8d-97c1-8e7263d04930?tenantId=a1eacbd5-fb0e-46f1-81e3-4965ea8e45bb">this SSO link</a>.</p> 
+                              </p>
+                              
+                              <p style="margin-bottom: 20px; 
+                                      color: <#if EMAIL_BODY_COLOR??>${EMAIL_BODY_COLOR}<#else>#696969</#if>; 
+                                      font-family: <#if EMAIL_BODY_FONT??>${EMAIL_BODY_FONT}<#else>Arial</#if>;">
+                                    If you want to sign in via the app, please download the app from our company app portal.<br>
+                                    <br> You will no longer be able to access Appical using your personal email or your personal device. Of course, your progress is saved.<br> 
+                                    <br>
+                                    If you have any questions, you can contact our <font color="#696969"><a href="mailto:onboarding@allianzgi.com?subject=AllianzGI%20SSO%20login&body=Hi%2C%20%0A%0AI%20am%20experiencing%20issues%20logging%20into%20Appical%20via%20my%20new%20AllianzGI%20email%20address.%20Can%20you%20help%20me%20out%3F%20" target="_blank">Onboarding Specialist</a>.</font><br>
+                                    <br>
+                                    Welcome and good luck during your first few days.                                                                        
+                              </p>                              
+
+
+
+                              
+                              
 
                         </td>
                     </tr>
@@ -598,22 +624,6 @@ Welcome and good luck during your first few days.</p>
 				</tr>
 				</table>
 				<![endif]-->
-            </td>
-        </tr>
-    </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
-    <tbody class="mcnButtonBlockOuter">
-        <tr>
-            <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
-                <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border-radius: 3px;background-color: #03142D;">
-                    <tbody>
-                        <tr>
-                            <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial; font-size: 16px; padding: 15px;">
-                                <a class="mcnButton " title="Let's continue!" href="https://myapps.microsoft.com/signin/1770ff9d-1749-4d8d-97c1-8e7263d04930?tenantId=a1eacbd5-fb0e-46f1-81e3-4965ea8e45bb" target="_blank" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">Let's continue!</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
             </td>
         </tr>
     </tbody>
@@ -629,16 +639,13 @@ Welcome and good luck during your first few days.</p>
 				<!--[if mso]>
 				<td valign="top" width="600" style="width:600px;">
 				<![endif]-->
-                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
-                    <tbody><tr>
-                        
-                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-                        
-                            <div style="text-align: center;"><span style="font-size:12px"><span style="color:#696969"><span style="font-family:verdana,geneva,sans-serif">Powered by Appical</span></span></span></div>
-
-                        </td>
-                    </tr>
-                </tbody></table>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                     <tbody>
+                         <tr>
+                             <td valign="middle" style="padding: 5px 2px; text-align: center; font-family: Verdana, Geneva, sans-serif; font-size: 12px; color: #696969;"> <span>Powered by</span> <span class="logo_container" style="padding: 0 2px; vertical-align: middle;"> <#if IMAGE_FOOTER_LOGO_URL ??>   <img style="max-width: 60px; height: auto; display: inline-block; vertical-align: middle;" src="${IMAGE_FOOTER_LOGO_URL}" alt="Footer Logo"> <#else>Appical </#if> </span> <span style="padding: 0 2px;">|</span> <span>support@appical.com</span> </td>
+                         </tr>
+                     </tbody>
+                 </table>
 				<!--[if mso]>
 				</td>
 				<![endif]-->
@@ -653,7 +660,25 @@ Welcome and good luck during your first few days.</p>
 </table></td>
                             </tr>
                             <tr>
-                                <td valign="top" id="templateFooter"></td>
+                                <td valign="top" id="templateFooter"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
+    <tbody class="mcnDividerBlockOuter">
+        <tr>
+            <td class="mcnDividerBlockInner" style="min-width: 100%; padding: 10px 18px 25px;">
+                <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-top-width: 2px;border-top-style: solid;border-top-color: #EEEEEE;">
+                    <tbody><tr>
+                        <td>
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--            
+                <td class="mcnDividerBlockInner" style="padding: 18px;">
+                <hr class="mcnDividerContent" style="border-bottom-color:none; border-left-color:none; border-right-color:none; border-bottom-width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table></td>
                             </tr>
                         </table>
                         <!--[if (gte mso 9)|(IE)]>

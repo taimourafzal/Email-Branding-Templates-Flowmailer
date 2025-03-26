@@ -577,18 +577,36 @@
                         
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
                         
-                            <h1><span style="color:#696969">Hi,</span></h1>
 
-<p><font color="#696969">Please remove my personal data from the Appical platform.<br>
-<br>
-First Name: ${FNAME}<br>
-Last Name: ${LNAME}<br>
-Email: ${EMAIL}<br>
-User ID: ${UID}<br>
-Organization: ${COMPANY}<br>
-Time of request: ${TIME}<br>
-<br>
-Note: Asking to remove your personal data from the Appical platform will discontinue your access to our mobile and web app. In order for Appical to process this request, we will consult with the owner of your account—which is the organization associated with the Appical platform. Once we have communicated this information, you will be informed by email about your next steps. Appical has 30 days to respond to your request.</font></p>
+                            <h1 style="color: <#if EMAIL_TITLE_COLOR??>${EMAIL_TITLE_COLOR}<#else>#696969</#if>; 
+                                     font-size: 20px; 
+                                     font-family: <#if EMAIL_TITLE_FONT??>${EMAIL_TITLE_FONT}<#else>Helvetica</#if>; 
+                                     margin-top: 0px; 
+                                     margin-bottom: 0px; 
+                                     padding-bottom: 0px;">Hi,</h1>
+                              
+                              <p style="margin-bottom: 20px; 
+                                      color: <#if EMAIL_BODY_COLOR??>${EMAIL_BODY_COLOR}<#else>#696969</#if>; 
+                                      font-family: <#if EMAIL_BODY_FONT??>${EMAIL_BODY_FONT}<#else>Arial</#if>;">
+
+
+                                    Please remove my personal data from the Appical platform.<br>
+                                    <br>
+                                    First Name: ${FNAME}<br>
+                                    Last Name: ${LNAME}<br>
+                                    Email: ${EMAIL}<br>
+                                    User ID: ${UID}<br>
+                                    Organization: ${COMPANY}<br>
+                                    Time of request: ${TIME}<br>
+                                    <br>               
+                                    Note: Asking to remove your personal data from the Appical platform will discontinue your access to our mobile and web app. In order for Appical to process this request, we will consult with the owner of your account—which is the organization associated with the Appical platform. Once we have communicated this information, you will be informed by email about your next steps. Appical has 30 days to respond to your request.                                    
+                              </p>
+
+
+
+
+
+
 
                         </td>
                     </tr>
@@ -616,16 +634,16 @@ Note: Asking to remove your personal data from the Appical platform will discont
 				<!--[if mso]>
 				<td valign="top" width="599" style="width:599px;">
 				<![endif]-->
-                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
-                    <tbody><tr>
-                        
-                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-                        
-                            <div style="text-align: center;"><span style="font-size:12px"><span style="color:#696969"><span style="font-family:verdana,geneva,sans-serif">Powered by Appical</span></span></span></div>
-
-                        </td>
-                    </tr>
-                </tbody></table>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                     <tbody>
+                         <tr>
+                             <td valign="middle" style="padding: 5px 2px; text-align: center; font-family: Verdana, Geneva, sans-serif; font-size: 12px; color: #696969;"> <span>Powered by</span> <span class="logo_container" style="padding: 0 2px; vertical-align: middle;"> <#if IMAGE_FOOTER_LOGO_URL ??>   <img style="max-width: 60px; height: auto; display: inline-block; vertical-align: middle;" src="${IMAGE_FOOTER_LOGO_URL}" alt="Footer Logo"> <#else>Appical </#if> </span> <span style="padding: 0 2px;">|</span> <span>support@appical.com</span> </td>
+                         </tr>
+                     </tbody>
+                 </table>
+                
+                
+                
 				<!--[if mso]>
 				</td>
 				<![endif]-->

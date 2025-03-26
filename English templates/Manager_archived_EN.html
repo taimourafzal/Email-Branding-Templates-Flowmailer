@@ -554,11 +554,14 @@
                         <![endif]-->
                         <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">
                             <tr>
-                                <td valign="top" id="templatePreheader"></td>
-                            </tr>
-                            <tr>
-                                <td valign="top" id="templateHeader"></td>
-                            </tr>
+                                <td valign="top">
+                                    <#if LOGO_IMAGE_URL??>
+                                            <#if EMAIL_HEADER_COLOR ?? ><div style="height: auto; background-color: ${EMAIL_HEADER_COLOR}"> <img class="header-logo-image" style="max-width: 120px; max-height: 100px; padding: 16px 0 16px 20px;" src="${LOGO_IMAGE_URL}" alt="Footer Logo"> </div> </#if> 
+                                        <#else>
+                                            <#if EMAIL_HEADER_COLOR ??><div style="height: 59px; background-color: ${EMAIL_HEADER_COLOR}"></div> </#if> 
+                                    </#if>
+                                </td>
+                            </tr>      
                             <tr>
                                 <td valign="top" id="templateBody"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
     <tbody class="mcnTextBlockOuter">
@@ -577,15 +580,34 @@
                         
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
                         
-                            <h1><span style="color:#696969">Hi ${CUSTOM_EMAIL},</span></h1>
 
-<p><span style="color:#696969">We are sending you this notification to inform you that ${MANAGER_NAME} (${MANAGER_EMAIL}) got archived. ${MANAGER_FIRSTNAME} had the following new hires assigned:<br>
-<br>
-${NEWHIRE_LIST}<br>
-<br>
-If required, assign these users to (an)other follower(s) instead. If you need help on how to do that, check out our <a href="https://support.appical.net/en/articles/2579338-how-to-add-the-manager-function-to-any-account" target="_blank">support page</a>.</span><br></p>
 
-<p data-align="left" data-generated-at="15524702406110.23584789626207026" data-id="block-ember1794" style="text-align: center;"><span style="font-size:12px"><font color="#696969">You are receiving this email because you were assigned to receive these emails in Appical.</font></span></p>
+
+                            <h1 style="color: <#if EMAIL_TITLE_COLOR??>${EMAIL_TITLE_COLOR}<#else>#696969</#if>; 
+                                     font-size: 20px; 
+                                     font-family: <#if EMAIL_TITLE_FONT??>${EMAIL_TITLE_FONT}<#else>Helvetica</#if>; 
+                                     margin-top: 0px; 
+                                     margin-bottom: 0px; 
+                                     padding-bottom: 0px;">Hi ${CUSTOM_EMAIL},</h1>
+                              
+                              <p style="margin-bottom: 20px; 
+                                      color: <#if EMAIL_BODY_COLOR??>${EMAIL_BODY_COLOR}<#else>#696969</#if>; 
+                                      font-family: <#if EMAIL_BODY_FONT??>${EMAIL_BODY_FONT}<#else>Arial</#if>;">
+                                    We are sending you this notification to inform you that ${MANAGER_NAME} (${MANAGER_EMAIL}) got archived. ${MANAGER_FIRSTNAME} had the following new hires assigned:<br>
+                                    <br>
+                                    ${NEWHIRE_LIST}<br>
+                                    <br>
+                                    If required, assign these users to (an)other follower(s) instead. If you need help on how to do that, check out our <a href="https://support.appical.net/en/articles/2579338-how-to-add-the-manager-function-to-any-account" target="_blank">support page</a>.</span><br></p>
+
+                              </p>
+                              
+                              
+                              <p data-align="left" data-generated-at="15524702406110.23584789626207026" data-id="block-ember1794" 
+                                    style="text-align: center; margin-bottom: 20px;
+                                      color: <#if EMAIL_BODY_COLOR??>${EMAIL_BODY_COLOR}<#else>#696969</#if>; 
+                                      font-family: <#if EMAIL_BODY_FONT??>${EMAIL_BODY_FONT}<#else>Arial</#if>;">
+                                     You are receiving this email because you were assigned to receive these emails in Appical.
+                              </p>                              
 
                         </td>
                     </tr>
@@ -613,16 +635,14 @@ If required, assign these users to (an)other follower(s) instead. If you need he
 				<!--[if mso]>
 				<td valign="top" width="600" style="width:600px;">
 				<![endif]-->
-                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
-                    <tbody><tr>
-                        
-                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-                        
-                            <div style="text-align: center;"><span style="font-size:12px"><span style="color:#696969"><span style="font-family:verdana,geneva,sans-serif">Powered by Appical | support@appical.net</span></span></span></div>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                     <tbody>
+                         <tr>
+                             <td valign="middle" style="padding: 5px 2px; text-align: center; font-family: Verdana, Geneva, sans-serif; font-size: 12px; color: #696969;"> <span>Powered by</span> <span class="logo_container" style="padding: 0 2px; vertical-align: middle;"> <#if IMAGE_FOOTER_LOGO_URL ??>   <img style="max-width: 60px; height: auto; display: inline-block; vertical-align: middle;" src="${IMAGE_FOOTER_LOGO_URL}" alt="Footer Logo"> <#else>Appical </#if> </span> <span style="padding: 0 2px;">|</span> <span>support@appical.com</span> </td>
+                         </tr>
+                     </tbody>
+                 </table>
 
-                        </td>
-                    </tr>
-                </tbody></table>
 				<!--[if mso]>
 				</td>
 				<![endif]-->
